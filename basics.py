@@ -87,3 +87,17 @@ arr.insert(1,7)
 
 # Initialising an array of size n with the value of 1
 arr = [1] * 5
+
+# Careful: -1 is not out of bounds, it's the last value
+arr = [1, 2, 3]
+print(arr[-1])
+>>> 3
+
+# Indexing -2 is the second to last value, etc.
+print(arr[-2])
+>>> 2
+
+# Sublists (aka slicing)
+arr = [1, 2, 3, 4]
+print(arr[1:3])
+>>> [2, 3]
