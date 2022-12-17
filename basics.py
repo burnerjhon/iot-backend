@@ -390,3 +390,13 @@ print(set([1, 2, 3]))
 mySet = { i for i in range(5) }
 print(mySet)
 >>> {0, 1, 2, 3, 4}
+
+# HashMap (aka dict)
+myMap = {}
+myMap["alice"] = 88
+myMap["bob"] = 77
+print(myMap)
+>>> {"alice": 88, "bob": 77}
+
+print(len(myMap))
+>>> 2
