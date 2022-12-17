@@ -358,3 +358,21 @@ queue.pop()
 print(queue)
 
 >>> deque([1])
+
+
+# HashSet
+mySet = set()
+
+mySet.add(1)
+mySet.add(2)
+print(mySet)
+>>> {1, 2}
+print(len(mySet))
+>>> 2
+
+print(1 in mySet)
+>>> True
+print(2 in mySet)
+>>> True
+print(3 in mySet)
+>>> False
