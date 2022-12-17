@@ -400,3 +400,10 @@ print(myMap)
 
 print(len(myMap))
 >>> 2
+
+myMap["alice"] = 80
+print(myMap["alice"])
+>>> 80
+
+print("alice" in myMap)
+>>> True
