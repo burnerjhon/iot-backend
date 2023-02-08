@@ -2,7 +2,7 @@
 n = 0
 print('n =', n)
 >>> n = 0
-
+#check
 n = "abc"
 print('n =', n)
 >>> n = abc
