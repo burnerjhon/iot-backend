@@ -1,8 +1,10 @@
 const express = require('express')
+var bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
 app.use(cors())
 app.use(express.bodyParser());
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
@@ -10,7 +12,6 @@ app.use((req, res, next) => {
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
 });
-
 app.use(express.json())
 app.post('/', (req, res) => {
   let data = req.body
