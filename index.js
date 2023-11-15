@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
 })
 
 app.get('/distance', (req, res) => {
-  res.send(distance)
+  res.json(distance)
 })
 
 const PORT = process.env.PORT || 3000
