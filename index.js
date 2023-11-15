@@ -2,6 +2,7 @@ const express = require('express')
 var bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
+var distance;
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use((req, res, next) => {
@@ -14,9 +15,13 @@ app.use((req, res, next) => {
 app.use(express.json())
 app.post('/', (req, res) => {
   let data = req.body
-  console.log(data)
-  console.log("hola")
-  res.send('Hello World!')
+  distance = data.distance
+  res.send('Distance Updated')
 })
+
+app.get('/distance', (req, res) => {
+  res.send(distance)
+})
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log('Example app listening on port 3000!'))
