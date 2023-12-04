@@ -14,6 +14,7 @@ app.use((req, res, next) => {
 });
 app.use(express.json())
 app.post('/', (req, res) => {
+  console.log("Attempt received")
   let data = req.body
   distance = data.distance
   console.log(distance)
