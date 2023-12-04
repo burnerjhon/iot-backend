@@ -16,6 +16,7 @@ app.use(express.json())
 app.post('/', (req, res) => {
   let data = req.body
   distance = data.distance
+  console.log(distance)
   res.send('Distance Updated')
 })
 
